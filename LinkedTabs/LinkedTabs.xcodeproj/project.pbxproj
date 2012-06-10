@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E1EBCA1D15851A8500892759 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EBCA1C15851A8500892759 /* UIKit.framework */; };
+		E1EBCA1F15851A8500892759 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EBCA1E15851A8500892759 /* Foundation.framework */; };
+		E1EBCA2115851A8500892759 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EBCA2015851A8500892759 /* CoreGraphics.framework */; };
+		E1EBCA2715851A8500892759 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1EBCA2515851A8500892759 /* InfoPlist.strings */; };
+		E1EBCA2915851A8500892759 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBCA2815851A8500892759 /* main.m */; };
+		E1EBCA2D15851A8500892759 /* LTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBCA2C15851A8500892759 /* LTAppDelegate.m */; };
+		E1EBCA3015851A8500892759 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EBCA2E15851A8500892759 /* MainStoryboard.storyboard */; };
+		E1EBCA3315851A8500892759 /* LTFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBCA3215851A8500892759 /* LTFirstViewController.m */; };
+		E1EBCA3515851A8500892759 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = E1EBCA3415851A8500892759 /* first.png */; };
+		E1EBCA3715851A8500892759 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1EBCA3615851A8500892759 /* first@2x.png */; };
+		E1EBCA3A15851A8500892759 /* LTSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBCA3915851A8500892759 /* LTSecondViewController.m */; };
+		E1EBCA3C15851A8500892759 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = E1EBCA3B15851A8500892759 /* second.png */; };
+		E1EBCA3E15851A8500892759 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1EBCA3D15851A8500892759 /* second@2x.png */; };
+		E1EBCA4615851A8500892759 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EBCA4515851A8500892759 /* SenTestingKit.framework */; };
+		E1EBCA4715851A8500892759 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EBCA1C15851A8500892759 /* UIKit.framework */; };
+		E1EBCA4815851A8500892759 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EBCA1E15851A8500892759 /* Foundation.framework */; };
+		E1EBCA5015851A8500892759 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1EBCA4E15851A8500892759 /* InfoPlist.strings */; };
+		E1EBCA5315851A8600892759 /* LinkedTabsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBCA5215851A8600892759 /* LinkedTabsTests.m */; };
+		E1EBCA6215851B0700892759 /* RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBCA6115851B0700892759 /* RBStoryboardLink.m */; };
+		E1EBCA6815851B4B00892759 /* FirstTabStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EBCA6715851B4B00892759 /* FirstTabStoryboard.storyboard */; };
+		E1EBCA6A15851B5600892759 /* SecondTabStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EBCA6915851B5600892759 /* SecondTabStoryboard.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1EBCA4915851A8500892759 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1EBCA0F15851A8500892759 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1EBCA1715851A8500892759;
+			remoteInfo = LinkedTabs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E1EBCA1815851A8500892759 /* LinkedTabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkedTabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1EBCA1C15851A8500892759 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E1EBCA1E15851A8500892759 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E1EBCA2015851A8500892759 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E1EBCA2415851A8500892759 /* LinkedTabs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LinkedTabs-Info.plist"; sourceTree = "<group>"; };
+		E1EBCA2615851A8500892759 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E1EBCA2815851A8500892759 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E1EBCA2A15851A8500892759 /* LinkedTabs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinkedTabs-Prefix.pch"; sourceTree = "<group>"; };
+		E1EBCA2B15851A8500892759 /* LTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTAppDelegate.h; sourceTree = "<group>"; };
+		E1EBCA2C15851A8500892759 /* LTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTAppDelegate.m; sourceTree = "<group>"; };
+		E1EBCA2F15851A8500892759 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E1EBCA3115851A8500892759 /* LTFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTFirstViewController.h; sourceTree = "<group>"; };
+		E1EBCA3215851A8500892759 /* LTFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTFirstViewController.m; sourceTree = "<group>"; };
+		E1EBCA3415851A8500892759 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		E1EBCA3615851A8500892759 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		E1EBCA3815851A8500892759 /* LTSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTSecondViewController.h; sourceTree = "<group>"; };
+		E1EBCA3915851A8500892759 /* LTSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTSecondViewController.m; sourceTree = "<group>"; };
+		E1EBCA3B15851A8500892759 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		E1EBCA3D15851A8500892759 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		E1EBCA4415851A8500892759 /* LinkedTabsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkedTabsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1EBCA4515851A8500892759 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E1EBCA4D15851A8500892759 /* LinkedTabsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LinkedTabsTests-Info.plist"; sourceTree = "<group>"; };
+		E1EBCA4F15851A8500892759 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E1EBCA5115851A8600892759 /* LinkedTabsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedTabsTests.h; sourceTree = "<group>"; };
+		E1EBCA5215851A8600892759 /* LinkedTabsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedTabsTests.m; sourceTree = "<group>"; };
+		E1EBCA6015851B0700892759 /* RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RBStoryboardLink.h; path = ../../RBStoryboardLink.h; sourceTree = "<group>"; };
+		E1EBCA6115851B0700892759 /* RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RBStoryboardLink.m; path = ../../RBStoryboardLink.m; sourceTree = "<group>"; };
+		E1EBCA6715851B4B00892759 /* FirstTabStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstTabStoryboard.storyboard; sourceTree = "<group>"; };
+		E1EBCA6915851B5600892759 /* SecondTabStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondTabStoryboard.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1EBCA1515851A8500892759 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EBCA1D15851A8500892759 /* UIKit.framework in Frameworks */,
+				E1EBCA1F15851A8500892759 /* Foundation.framework in Frameworks */,
+				E1EBCA2115851A8500892759 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1EBCA4015851A8500892759 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EBCA4615851A8500892759 /* SenTestingKit.framework in Frameworks */,
+				E1EBCA4715851A8500892759 /* UIKit.framework in Frameworks */,
+				E1EBCA4815851A8500892759 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E1EBCA0D15851A8500892759 = {
+			isa = PBXGroup;
+			children = (
+				E1EBCA2215851A8500892759 /* LinkedTabs */,
+				E1EBCA4B15851A8500892759 /* LinkedTabsTests */,
+				E1EBCA1B15851A8500892759 /* Frameworks */,
+				E1EBCA1915851A8500892759 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E1EBCA1915851A8500892759 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1EBCA1815851A8500892759 /* LinkedTabs.app */,
+				E1EBCA4415851A8500892759 /* LinkedTabsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1EBCA1B15851A8500892759 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1EBCA1C15851A8500892759 /* UIKit.framework */,
+				E1EBCA1E15851A8500892759 /* Foundation.framework */,
+				E1EBCA2015851A8500892759 /* CoreGraphics.framework */,
+				E1EBCA4515851A8500892759 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1EBCA2215851A8500892759 /* LinkedTabs */ = {
+			isa = PBXGroup;
+			children = (
+				E1EBCA2B15851A8500892759 /* LTAppDelegate.h */,
+				E1EBCA2C15851A8500892759 /* LTAppDelegate.m */,
+				E1EBCA2E15851A8500892759 /* MainStoryboard.storyboard */,
+				E1EBCA6415851B0D00892759 /* RBStoryboardLink */,
+				E1EBCA6515851B2600892759 /* First Tab Storyboard */,
+				E1EBCA6615851B3100892759 /* Second Tab Storyboard */,
+				E1EBCA2315851A8500892759 /* Supporting Files */,
+			);
+			path = LinkedTabs;
+			sourceTree = "<group>";
+		};
+		E1EBCA2315851A8500892759 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1EBCA2415851A8500892759 /* LinkedTabs-Info.plist */,
+				E1EBCA2515851A8500892759 /* InfoPlist.strings */,
+				E1EBCA2815851A8500892759 /* main.m */,
+				E1EBCA2A15851A8500892759 /* LinkedTabs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1EBCA4B15851A8500892759 /* LinkedTabsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1EBCA5115851A8600892759 /* LinkedTabsTests.h */,
+				E1EBCA5215851A8600892759 /* LinkedTabsTests.m */,
+				E1EBCA4C15851A8500892759 /* Supporting Files */,
+			);
+			path = LinkedTabsTests;
+			sourceTree = "<group>";
+		};
+		E1EBCA4C15851A8500892759 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1EBCA4D15851A8500892759 /* LinkedTabsTests-Info.plist */,
+				E1EBCA4E15851A8500892759 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1EBCA6415851B0D00892759 /* RBStoryboardLink */ = {
+			isa = PBXGroup;
+			children = (
+				E1EBCA6015851B0700892759 /* RBStoryboardLink.h */,
+				E1EBCA6115851B0700892759 /* RBStoryboardLink.m */,
+			);
+			name = RBStoryboardLink;
+			sourceTree = "<group>";
+		};
+		E1EBCA6515851B2600892759 /* First Tab Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E1EBCA3115851A8500892759 /* LTFirstViewController.h */,
+				E1EBCA3215851A8500892759 /* LTFirstViewController.m */,
+				E1EBCA3415851A8500892759 /* first.png */,
+				E1EBCA3615851A8500892759 /* first@2x.png */,
+				E1EBCA6715851B4B00892759 /* FirstTabStoryboard.storyboard */,
+			);
+			name = "First Tab Storyboard";
+			sourceTree = "<group>";
+		};
+		E1EBCA6615851B3100892759 /* Second Tab Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E1EBCA3815851A8500892759 /* LTSecondViewController.h */,
+				E1EBCA3915851A8500892759 /* LTSecondViewController.m */,
+				E1EBCA3B15851A8500892759 /* second.png */,
+				E1EBCA3D15851A8500892759 /* second@2x.png */,
+				E1EBCA6915851B5600892759 /* SecondTabStoryboard.storyboard */,
+			);
+			name = "Second Tab Storyboard";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1EBCA1715851A8500892759 /* LinkedTabs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1EBCA5615851A8600892759 /* Build configuration list for PBXNativeTarget "LinkedTabs" */;
+			buildPhases = (
+				E1EBCA1415851A8500892759 /* Sources */,
+				E1EBCA1515851A8500892759 /* Frameworks */,
+				E1EBCA1615851A8500892759 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LinkedTabs;
+			productName = LinkedTabs;
+			productReference = E1EBCA1815851A8500892759 /* LinkedTabs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E1EBCA4315851A8500892759 /* LinkedTabsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1EBCA5915851A8600892759 /* Build configuration list for PBXNativeTarget "LinkedTabsTests" */;
+			buildPhases = (
+				E1EBCA3F15851A8500892759 /* Sources */,
+				E1EBCA4015851A8500892759 /* Frameworks */,
+				E1EBCA4115851A8500892759 /* Resources */,
+				E1EBCA4215851A8500892759 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1EBCA4A15851A8500892759 /* PBXTargetDependency */,
+			);
+			name = LinkedTabsTests;
+			productName = LinkedTabsTests;
+			productReference = E1EBCA4415851A8500892759 /* LinkedTabsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1EBCA0F15851A8500892759 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LT;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Robert Brown";
+			};
+			buildConfigurationList = E1EBCA1215851A8500892759 /* Build configuration list for PBXProject "LinkedTabs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E1EBCA0D15851A8500892759;
+			productRefGroup = E1EBCA1915851A8500892759 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1EBCA1715851A8500892759 /* LinkedTabs */,
+				E1EBCA4315851A8500892759 /* LinkedTabsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1EBCA1615851A8500892759 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EBCA2715851A8500892759 /* InfoPlist.strings in Resources */,
+				E1EBCA3015851A8500892759 /* MainStoryboard.storyboard in Resources */,
+				E1EBCA3515851A8500892759 /* first.png in Resources */,
+				E1EBCA3715851A8500892759 /* first@2x.png in Resources */,
+				E1EBCA3C15851A8500892759 /* second.png in Resources */,
+				E1EBCA3E15851A8500892759 /* second@2x.png in Resources */,
+				E1EBCA6815851B4B00892759 /* FirstTabStoryboard.storyboard in Resources */,
+				E1EBCA6A15851B5600892759 /* SecondTabStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1EBCA4115851A8500892759 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EBCA5015851A8500892759 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1EBCA4215851A8500892759 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1EBCA1415851A8500892759 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EBCA2915851A8500892759 /* main.m in Sources */,
+				E1EBCA2D15851A8500892759 /* LTAppDelegate.m in Sources */,
+				E1EBCA3315851A8500892759 /* LTFirstViewController.m in Sources */,
+				E1EBCA3A15851A8500892759 /* LTSecondViewController.m in Sources */,
+				E1EBCA6215851B0700892759 /* RBStoryboardLink.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1EBCA3F15851A8500892759 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EBCA5315851A8600892759 /* LinkedTabsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1EBCA4A15851A8500892759 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1EBCA1715851A8500892759 /* LinkedTabs */;
+			targetProxy = E1EBCA4915851A8500892759 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E1EBCA2515851A8500892759 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1EBCA2615851A8500892759 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E1EBCA2E15851A8500892759 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1EBCA2F15851A8500892759 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		E1EBCA4E15851A8500892759 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1EBCA4F15851A8500892759 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E1EBCA5415851A8600892759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E1EBCA5515851A8600892759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E1EBCA5715851A8600892759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LinkedTabs/LinkedTabs-Prefix.pch";
+				INFOPLIST_FILE = "LinkedTabs/LinkedTabs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E1EBCA5815851A8600892759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LinkedTabs/LinkedTabs-Prefix.pch";
+				INFOPLIST_FILE = "LinkedTabs/LinkedTabs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E1EBCA5A15851A8600892759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LinkedTabs.app/LinkedTabs";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LinkedTabs/LinkedTabs-Prefix.pch";
+				INFOPLIST_FILE = "LinkedTabsTests/LinkedTabsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E1EBCA5B15851A8600892759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LinkedTabs.app/LinkedTabs";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LinkedTabs/LinkedTabs-Prefix.pch";
+				INFOPLIST_FILE = "LinkedTabsTests/LinkedTabsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1EBCA1215851A8500892759 /* Build configuration list for PBXProject "LinkedTabs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1EBCA5415851A8600892759 /* Debug */,
+				E1EBCA5515851A8600892759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1EBCA5615851A8600892759 /* Build configuration list for PBXNativeTarget "LinkedTabs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1EBCA5715851A8600892759 /* Debug */,
+				E1EBCA5815851A8600892759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1EBCA5915851A8600892759 /* Build configuration list for PBXNativeTarget "LinkedTabsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1EBCA5A15851A8600892759 /* Debug */,
+				E1EBCA5B15851A8600892759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1EBCA0F15851A8500892759 /* Project object */;
+}
