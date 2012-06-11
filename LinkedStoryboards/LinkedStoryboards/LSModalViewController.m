@@ -1,6 +1,6 @@
 //
-// LTFirstViewController.h
-// LinkedTabs
+// LSModalViewController.m
+// LinkedStoryboards
 //
 // Copyright (c) 2012 Robert Brown
 //
@@ -23,8 +23,20 @@
 // THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "LSModalViewController.h"
 
-@interface LTFirstViewController : UIViewController
+@interface LSModalViewController ()
+
+@end
+
+@implementation LSModalViewController
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (IBAction)dismissModalView:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 @end

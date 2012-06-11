@@ -1,6 +1,6 @@
 //
-// LTFirstViewController.h
-// LinkedTabs
+// LSChooseViewController.m
+// LinkedStoryboards
 //
 // Copyright (c) 2012 Robert Brown
 //
@@ -23,8 +23,29 @@
 // THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "LSChooseViewController.h"
+#import "RBStoryboardLink.h"
+#import "LSParameterReceivingViewController.h"
 
-@interface LTFirstViewController : UIViewController
+
+@implementation LSChooseViewController
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    id scene = [[segue destinationViewController] scene];
+    
+    if ([scene isKindOfClass:[LSParameterReceivingViewController class]]) {
+        LSParameterReceivingViewController * vc = (LSParameterReceivingViewController *)scene;
+        
+        [[vc label] setText:[NSString stringWithFormat:
+                             @"This text has been set in code from %@ using %@", 
+                             NSStringFromClass([self class]),
+                             NSStringFromSelector(_cmd)]];
+    }
+}
 
 @end

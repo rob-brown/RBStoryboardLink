@@ -1,6 +1,6 @@
 //
-// LTFirstViewController.h
-// LinkedTabs
+// LSParameterReceivingViewController.m
+// LinkedStoryboards
 //
 // Copyright (c) 2012 Robert Brown
 //
@@ -23,8 +23,20 @@
 // THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "LSParameterReceivingViewController.h"
 
-@interface LTFirstViewController : UIViewController
+
+@implementation LSParameterReceivingViewController
+
+@synthesize label = _label;
+
+- (void)viewDidUnload {
+    [self setLabel:nil];
+    [super viewDidUnload];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
 
 @end

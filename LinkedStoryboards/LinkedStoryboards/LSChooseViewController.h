@@ -1,6 +1,6 @@
 //
-// LTFirstViewController.h
-// LinkedTabs
+// LSChooseViewController.h
+// LinkedStoryboards
 //
 // Copyright (c) 2012 Robert Brown
 //
@@ -25,6 +25,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LTFirstViewController : UIViewController
+@interface LSChooseViewController : UIViewController
 
 @end

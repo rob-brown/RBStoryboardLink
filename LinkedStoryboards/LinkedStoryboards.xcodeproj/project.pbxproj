@@ -18,13 +18,16 @@
 		E1EA284C1584FB34004B0898 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EA282C1584FB34004B0898 /* UIKit.framework */; };
 		E1EA284D1584FB34004B0898 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EA282E1584FB34004B0898 /* Foundation.framework */; };
 		E1EA28551584FB34004B0898 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1EA28531584FB34004B0898 /* InfoPlist.strings */; };
-		E1EA28581584FB34004B0898 /* LinkedStoryboardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EA28571584FB34004B0898 /* LinkedStoryboardsTests.m */; };
 		E1EA28621584FB56004B0898 /* SecondaryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EA28611584FB56004B0898 /* SecondaryStoryboard.storyboard */; };
 		E1EA286A1584FDB7004B0898 /* LSHelloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EA28691584FDB7004B0898 /* LSHelloViewController.m */; };
 		E1EA286D1584FDC4004B0898 /* LSRandomNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EA286C1584FDC4004B0898 /* LSRandomNumberViewController.m */; };
 		E1EBCA0B15851A3900892759 /* RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBCA0A15851A3900892759 /* RBStoryboardLink.m */; };
 		E1EBCA6D1585263C00892759 /* LSLinkedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBCA6C1585263C00892759 /* LSLinkedViewController.m */; };
-		E1EBCA701585265000892759 /* LSLastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBCA6F1585265000892759 /* LSLastViewController.m */; };
+		E1EBCA701585265000892759 /* LSChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBCA6F1585265000892759 /* LSChooseViewController.m */; };
+		E1EBCA7215857B3700892759 /* TertiaryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EBCA7115857B3700892759 /* TertiaryStoryboard.storyboard */; };
+		E1EBCA7615857C0F00892759 /* LSParameterReceivingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBCA7515857C0F00892759 /* LSParameterReceivingViewController.m */; };
+		E1EBCA7815857C3B00892759 /* ModalStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EBCA7715857C3B00892759 /* ModalStoryboard.storyboard */; };
+		E1EBCA7C15857D4A00892759 /* LSModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBCA7B15857D4A00892759 /* LSModalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +56,6 @@
 		E1EA284A1584FB34004B0898 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E1EA28521584FB34004B0898 /* LinkedStoryboardsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LinkedStoryboardsTests-Info.plist"; sourceTree = "<group>"; };
 		E1EA28541584FB34004B0898 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E1EA28561584FB34004B0898 /* LinkedStoryboardsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedStoryboardsTests.h; sourceTree = "<group>"; };
-		E1EA28571584FB34004B0898 /* LinkedStoryboardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedStoryboardsTests.m; sourceTree = "<group>"; };
 		E1EA28611584FB56004B0898 /* SecondaryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondaryStoryboard.storyboard; sourceTree = "<group>"; };
 		E1EA28681584FDB7004B0898 /* LSHelloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSHelloViewController.h; sourceTree = "<group>"; };
 		E1EA28691584FDB7004B0898 /* LSHelloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSHelloViewController.m; sourceTree = "<group>"; };
@@ -64,8 +65,14 @@
 		E1EBCA0A15851A3900892759 /* RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RBStoryboardLink.m; path = ../../RBStoryboardLink.m; sourceTree = "<group>"; };
 		E1EBCA6B1585263C00892759 /* LSLinkedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSLinkedViewController.h; sourceTree = "<group>"; };
 		E1EBCA6C1585263C00892759 /* LSLinkedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSLinkedViewController.m; sourceTree = "<group>"; };
-		E1EBCA6E1585265000892759 /* LSLastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSLastViewController.h; sourceTree = "<group>"; };
-		E1EBCA6F1585265000892759 /* LSLastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSLastViewController.m; sourceTree = "<group>"; };
+		E1EBCA6E1585265000892759 /* LSChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = LSChooseViewController.h; sourceTree = "<group>"; };
+		E1EBCA6F1585265000892759 /* LSChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSChooseViewController.m; sourceTree = "<group>"; };
+		E1EBCA7115857B3700892759 /* TertiaryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TertiaryStoryboard.storyboard; sourceTree = "<group>"; };
+		E1EBCA7415857C0F00892759 /* LSParameterReceivingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSParameterReceivingViewController.h; sourceTree = "<group>"; };
+		E1EBCA7515857C0F00892759 /* LSParameterReceivingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSParameterReceivingViewController.m; sourceTree = "<group>"; };
+		E1EBCA7715857C3B00892759 /* ModalStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ModalStoryboard.storyboard; sourceTree = "<group>"; };
+		E1EBCA7A15857D4A00892759 /* LSModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSModalViewController.h; sourceTree = "<group>"; };
+		E1EBCA7B15857D4A00892759 /* LSModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSModalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +136,9 @@
 				E1EA283C1584FB34004B0898 /* LSAppDelegate.m */,
 				E1EBCA0C15851A5400892759 /* RBStoryboardLink */,
 				E1EA28631584FB5B004B0898 /* Main Storyboard */,
-				E1EA28641584FB62004B0898 /* SecondaryStoryboard */,
+				E1EA28641584FB62004B0898 /* Secondary Storyboard */,
+				E1EBCA7315857B3F00892759 /* Tertiary Storyboard */,
+				E1EBCA7915857C4100892759 /* Modal Storyboard */,
 				E1EA28331584FB34004B0898 /* Supporting Files */,
 			);
 			path = LinkedStoryboards;
@@ -149,8 +158,6 @@
 		E1EA28501584FB34004B0898 /* LinkedStoryboardsTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1EA28561584FB34004B0898 /* LinkedStoryboardsTests.h */,
-				E1EA28571584FB34004B0898 /* LinkedStoryboardsTests.m */,
 				E1EA28511584FB34004B0898 /* Supporting Files */,
 			);
 			path = LinkedStoryboardsTests;
@@ -177,16 +184,16 @@
 			name = "Main Storyboard";
 			sourceTree = "<group>";
 		};
-		E1EA28641584FB62004B0898 /* SecondaryStoryboard */ = {
+		E1EA28641584FB62004B0898 /* Secondary Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				E1EA28611584FB56004B0898 /* SecondaryStoryboard.storyboard */,
 				E1EBCA6B1585263C00892759 /* LSLinkedViewController.h */,
 				E1EBCA6C1585263C00892759 /* LSLinkedViewController.m */,
-				E1EBCA6E1585265000892759 /* LSLastViewController.h */,
-				E1EBCA6F1585265000892759 /* LSLastViewController.m */,
+				E1EBCA6E1585265000892759 /* LSChooseViewController.h */,
+				E1EBCA6F1585265000892759 /* LSChooseViewController.m */,
 			);
-			name = SecondaryStoryboard;
+			name = "Secondary Storyboard";
 			sourceTree = "<group>";
 		};
 		E1EBCA0C15851A5400892759 /* RBStoryboardLink */ = {
@@ -196,6 +203,26 @@
 				E1EBCA0A15851A3900892759 /* RBStoryboardLink.m */,
 			);
 			name = RBStoryboardLink;
+			sourceTree = "<group>";
+		};
+		E1EBCA7315857B3F00892759 /* Tertiary Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E1EBCA7115857B3700892759 /* TertiaryStoryboard.storyboard */,
+				E1EBCA7415857C0F00892759 /* LSParameterReceivingViewController.h */,
+				E1EBCA7515857C0F00892759 /* LSParameterReceivingViewController.m */,
+			);
+			name = "Tertiary Storyboard";
+			sourceTree = "<group>";
+		};
+		E1EBCA7915857C4100892759 /* Modal Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E1EBCA7715857C3B00892759 /* ModalStoryboard.storyboard */,
+				E1EBCA7A15857D4A00892759 /* LSModalViewController.h */,
+				E1EBCA7B15857D4A00892759 /* LSModalViewController.m */,
+			);
+			name = "Modal Storyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +300,8 @@
 				E1EA28371584FB34004B0898 /* InfoPlist.strings in Resources */,
 				E1EA28401584FB34004B0898 /* MainStoryboard.storyboard in Resources */,
 				E1EA28621584FB56004B0898 /* SecondaryStoryboard.storyboard in Resources */,
+				E1EBCA7215857B3700892759 /* TertiaryStoryboard.storyboard in Resources */,
+				E1EBCA7815857C3B00892759 /* ModalStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +342,9 @@
 				E1EA286D1584FDC4004B0898 /* LSRandomNumberViewController.m in Sources */,
 				E1EBCA0B15851A3900892759 /* RBStoryboardLink.m in Sources */,
 				E1EBCA6D1585263C00892759 /* LSLinkedViewController.m in Sources */,
-				E1EBCA701585265000892759 /* LSLastViewController.m in Sources */,
+				E1EBCA701585265000892759 /* LSChooseViewController.m in Sources */,
+				E1EBCA7615857C0F00892759 /* LSParameterReceivingViewController.m in Sources */,
+				E1EBCA7C15857D4A00892759 /* LSModalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +352,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1EA28581584FB34004B0898 /* LinkedStoryboardsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

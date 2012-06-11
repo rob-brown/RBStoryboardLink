@@ -1,6 +1,6 @@
 //
-// LTFirstViewController.h
-// LinkedTabs
+// LSParameterReceivingViewController.h
+// LinkedStoryboards
 //
 // Copyright (c) 2012 Robert Brown
 //
@@ -25,6 +25,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LTFirstViewController : UIViewController
+@interface LSParameterReceivingViewController : UIViewController
+
+@property (nonatomic, strong) IBOutlet UILabel * label;
 
 @end
