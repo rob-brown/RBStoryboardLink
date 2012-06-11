@@ -6,7 +6,7 @@
 
 ##Dependencies
 
-`RBStoryboardLink` requires iOS 5.0+ for `UIStoryboards`.
+`RBStoryboardLink` requires iOS 5.0+ for `UIStoryboards` and `UIViewController` Containment.
 
 ##How to use
 
@@ -28,7 +28,7 @@
 
 There are two demos that are provided to show how to use `RBStoryboardLink`:
 
-1. A straightforward workflow. 
+1. A standard, straightforward workflow. 
 
 2. A tabbed workflow. 
 
