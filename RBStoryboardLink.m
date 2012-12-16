@@ -141,4 +141,15 @@
     return [self.scene shouldAutorotateToInterfaceOrientation:toInterfaceOrientation];
 }
 
+- (BOOL)shouldAutorotate {
+
+    // The linked scene defines autorotate.
+    return [self.scene shouldAutorotate];
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+
+    // The linked scene defines supported orientations.
+    return [self.scene supportedInterfaceOrientations];
+}
 @end
