@@ -135,6 +135,14 @@
     self.wantsFullScreenLayout = scene.wantsFullScreenLayout;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    // adds the scene's view
+    [self.view addSubview:[self.scene view]];
+    [self.scene didMoveToParentViewController:self];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     
     // The linked scene defines the rotation. 
