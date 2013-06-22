@@ -143,6 +143,34 @@
     [self.scene didMoveToParentViewController:self];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  if (self.scene!=nil && ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])) {
+    [self.scene viewWillAppear:animated];
+  }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  if (self.scene!=nil && ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])) {
+    [self.scene viewDidAppear:animated];
+  }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+  if (self.scene!=nil && ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])) {
+    [self.scene viewWillDisappear:animated];
+  }
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+  [super viewDidDisappear:animated];
+  if (self.scene!=nil && ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])) {
+    [self.scene viewDidDisappear:animated];
+  }
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     
     // The linked scene defines the rotation. 
