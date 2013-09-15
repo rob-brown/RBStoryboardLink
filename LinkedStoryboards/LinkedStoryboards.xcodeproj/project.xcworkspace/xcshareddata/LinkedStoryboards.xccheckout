@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AE6C9205-8F7A-4451-A1F3-7795D46B1E3C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LinkedStoryboards</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B5148967-45E7-4E4A-9272-74232B216E73</key>
+		<string>https://github.com/rob-brown/RBStoryboardLink.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LinkedStoryboards/LinkedStoryboards.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B5148967-45E7-4E4A-9272-74232B216E73</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rob-brown/RBStoryboardLink.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B5148967-45E7-4E4A-9272-74232B216E73</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B5148967-45E7-4E4A-9272-74232B216E73</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RBStoryboardLink</string>
+		</dict>
+	</array>
+</dict>
+</plist>
