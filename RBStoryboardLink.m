@@ -190,4 +190,29 @@
     // The linked scene defines supported orientations.
     return [self.scene supportedInterfaceOrientations];
 }
+
+
+#pragma mark - Message forwarding
+
+// The following methods are important to get unwind segues to work properly.
+
+- (BOOL)respondsToSelector:(SEL)aSelector {
+    return ([super respondsToSelector:aSelector] ||
+            [self.scene respondsToSelector:aSelector]);
+}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    return ([super methodSignatureForSelector:aSelector]
+            ?:
+            [self.scene methodSignatureForSelector:aSelector]);
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    
+    if ([self.scene respondsToSelector:[anInvocation selector]])
+        [anInvocation invokeWithTarget:self.scene];
+    else
+        [super forwardInvocation:anInvocation];
+}
+
 @end

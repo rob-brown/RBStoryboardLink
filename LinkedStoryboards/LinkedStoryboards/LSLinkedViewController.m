@@ -27,12 +27,18 @@
 
 @interface LSLinkedViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel * label;
+
 @end
 
 @implementation LSLinkedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (IBAction)unwind:(UIStoryboardSegue *)unwindSegue {
+    self.label.text = @"Unwind worked!";
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
