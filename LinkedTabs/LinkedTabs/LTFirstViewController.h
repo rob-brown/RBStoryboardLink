@@ -2,7 +2,7 @@
 // LTFirstViewController.h
 // LinkedTabs
 //
-// Copyright (c) 2012 Robert Brown
+// Copyright (c) 2012-2013 Robert Brown
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal

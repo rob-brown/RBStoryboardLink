@@ -6,7 +6,7 @@
 
 ##Dependencies
 
-`RBStoryboardLink` requires iOS 5.0+ for `UIStoryboards` and `UIViewController` Containment.
+`RBStoryboardLink` requires iOS 5.0+ for `UIStoryboards` and `UIViewController` Containment. Unwind segues require iOS 6.0+.
 
 ##How to use
 
@@ -36,7 +36,7 @@ There are two demos that are provided to show how to use `RBStoryboardLink`:
 
 `RBStoryboardLink` is licensed under the MIT license, which is reproduced in its entirety here:
 
->Copyright (c) 2012 Robert Brown
+>Copyright (c) 2012-2013 Robert Brown
 >
 >Permission is hereby granted, free of charge, to any person obtaining a copy
 >of this software and associated documentation files (the "Software"), to deal
