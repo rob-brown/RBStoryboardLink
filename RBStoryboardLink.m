@@ -73,6 +73,9 @@
     navItem.leftBarButtonItems = linkedNavItem.leftBarButtonItems;
     navItem.leftItemsSupplementBackButton = linkedNavItem.leftItemsSupplementBackButton;
     
+    // Grabs UIToolbarItems
+    self.toolbarItems = scene.toolbarItems;
+    
     // Grabs the UITabBarItem
     // The link overrides the contained view's tab bar item.
     if (self.tabBarController)
