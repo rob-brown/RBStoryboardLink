@@ -1,7 +1,7 @@
 //
 // RBStoryboardLink.m
 //
-// Copyright (c) 2012-2013 Robert Brown
+// Copyright (c) 2012-2014 Robert Brown
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -27,16 +27,12 @@
 
 @interface RBStoryboardLink ()
 
-@property (nonatomic, strong, readwrite) id scene;
+@property (nonatomic, strong, readwrite) UIViewController * scene;
 
 @end
 
 
 @implementation RBStoryboardLink
-
-@synthesize storyboardName  = _storyboardName;
-@synthesize sceneIdentifier = _sceneIdentifier;
-@synthesize scene           = _scene;
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -52,9 +48,9 @@
     else
         scene = [storyboard instantiateViewControllerWithIdentifier:self.sceneIdentifier];
     
-    NSAssert(scene, 
-             @"No scene found in storyboard: \"%@\" with optional identifier: \"%@\"", 
-             self.storyboardName, 
+    NSAssert(scene,
+             @"No scene found in storyboard: \"%@\" with optional identifier: \"%@\"",
+             self.storyboardName,
              self.sceneIdentifier);
     
     self.scene = scene;
@@ -83,7 +79,6 @@
     UIBarButtonItem * linkedEditButton = scene.editButtonItem;
     
     if (linkedEditButton) {
-        
         editButton.enabled = linkedEditButton.enabled;
         editButton.image = linkedEditButton.image;
         editButton.landscapeImagePhone = linkedEditButton.landscapeImagePhone;
@@ -107,88 +102,113 @@
     self.providesPresentationContextTransitionStyle = scene.providesPresentationContextTransitionStyle;
     
     // Grabs the popover properties.
-    self.contentSizeForViewInPopover = scene.contentSizeForViewInPopover;
+    self.preferredContentSize = scene.preferredContentSize;
     self.modalInPopover = scene.modalInPopover;
     
     // Grabs miscellaneous properties.
     self.title = scene.title;
     self.hidesBottomBarWhenPushed = scene.hidesBottomBarWhenPushed;
     self.editing = scene.editing;
-    self.wantsFullScreenLayout = scene.wantsFullScreenLayout;
+    
+    // Translucent bar properties.
+    self.automaticallyAdjustsScrollViewInsets = scene.automaticallyAdjustsScrollViewInsets;
+    self.edgesForExtendedLayout = scene.edgesForExtendedLayout;
+    self.extendedLayoutIncludesOpaqueBars = scene.extendedLayoutIncludesOpaqueBars;
+    self.modalPresentationCapturesStatusBarAppearance = scene.modalPresentationCapturesStatusBarAppearance;
+    self.transitioningDelegate = scene.transitioningDelegate;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIViewController * scene = self.scene;
-    
-    // Adjusts the frame of the child view.
-    CGRect frame = self.view.frame;
-    CGRect linkedFrame = scene.view.frame;
-    linkedFrame.origin.x -= frame.origin.x;
-    linkedFrame.origin.y -= frame.origin.y;
-    
-    // The scene's main view must be made flexible so it will resize properly
-    // in the container.
-    scene.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth |
-                                   UIViewAutoresizingFlexibleHeight);
-    
-    scene.view.frame = linkedFrame;
-    
     // Adds the view controller as a child view.
+    UIViewController * scene = self.scene;
     [self addChildViewController:scene];
     [self.view addSubview:scene.view];
-    [scene didMoveToParentViewController:self];
-    
-    // Adds the scene's view
-    [self.view addSubview:[self.scene view]];
     [self.scene didMoveToParentViewController:self];
+    
+    scene.view.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSDictionary * views = @{
+                             @"topGuide"    : self.topLayoutGuide,
+                             @"bottomGuide" : self.bottomLayoutGuide,
+                             @"view"        : scene.view,
+                             };
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[view]|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topGuide][view][bottomGuide]"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:views]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  if (self.scene!=nil && ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])) {
-    [self.scene viewWillAppear:animated];
-  }
+    [super viewWillAppear:animated];
+    
+    if ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])
+        [self.scene viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-  [super viewDidAppear:animated];
-  if (self.scene!=nil && ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])) {
-    [self.scene viewDidAppear:animated];
-  }
+    [super viewDidAppear:animated];
+    
+    if ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])
+        [self.scene viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-  [super viewWillDisappear:animated];
-  if (self.scene!=nil && ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])) {
-    [self.scene viewWillDisappear:animated];
-  }
+    [super viewWillDisappear:animated];
+    
+    if ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])
+        [self.scene viewWillDisappear:animated];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-  [super viewDidDisappear:animated];
-  if (self.scene!=nil && ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])) {
-    [self.scene viewDidDisappear:animated];
-  }
+    [super viewDidDisappear:animated];
+    
+    if ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])
+        [self.scene viewDidDisappear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     
-    // The linked scene defines the rotation. 
+    // The linked scene defines the rotation.
     return [self.scene shouldAutorotateToInterfaceOrientation:toInterfaceOrientation];
 }
 
 - (BOOL)shouldAutorotate {
-
+    
     // The linked scene defines autorotate.
     return [self.scene shouldAutorotate];
 }
 
 - (NSUInteger)supportedInterfaceOrientations {
-
+    
     // The linked scene defines supported orientations.
     return [self.scene supportedInterfaceOrientations];
+}
+
+- (UIViewController *)childViewControllerForStatusBarStyle {
+    return self.scene;
+}
+
+- (UIViewController *)childViewControllerForStatusBarHidden {
+    return self.scene;
+}
+
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
+    return [self.scene preferredStatusBarUpdateAnimation];
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return [self.scene prefersStatusBarHidden];
+}
+
+- (id<UIViewControllerTransitionCoordinator>)transitionCoordinator {
+    return [self.scene transitionCoordinator] ?: [super transitionCoordinator];
 }
 
 

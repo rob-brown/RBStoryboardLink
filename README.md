@@ -1,14 +1,14 @@
-#RBStoryboardLink
+# RBStoryboardLink
 
-##Summary
+## Summary
 
 `UIStoryboards` are very powerful and useful. However, to make the best use of storyboards, they need to be broken down into natural modules. The problem with having many storyboards is writing the code to transition between them. `RBStoryboardLink` solves this problem by allowing "pseudo-segues" between `UIStoryboards`. These segues can be built without leaving Interface Builder and without writing any extra code. 
 
-##Dependencies
+## Dependencies
 
-`RBStoryboardLink` requires iOS 5.0+ for `UIStoryboards` and `UIViewController` Containment. Unwind segues require iOS 6.0+.
+`RBStoryboardLink` requires iOS 7.0+. With some modifications it can support iOS 6 as well, but I wanted to keep it simple. `RBStoryboardLink` cannot simultaneously support iOS 5 and 7 due to the large functionality differences. 
 
-##How to use
+## How to use
 
 1. Your app's storyboards must first be decomposed into their natural modules. See this [guide][1] for some tips. 
 
@@ -24,19 +24,23 @@
   
   2. sceneIdentifier (Optional) The identifier of the view controller to transition to. If left blank, this will push the first view controller. 
 
-##Demos
+## Implementation notes
+
+* When using a `UITabBarController` with `UINavcontroller`s in the tabs. Place the `UINavigationController`s in the same storyboard as the `UITabBarController`.
+
+## Demos
 
 There are two demos that are provided to show how to use `RBStoryboardLink`:
 
-1. A standard, straightforward workflow. 
+* A standard, straightforward workflow. 
 
-2. A tabbed workflow. 
+* A tabbed workflow. 
 
-##License
+## License
 
 `RBStoryboardLink` is licensed under the MIT license, which is reproduced in its entirety here:
 
->Copyright (c) 2012-2013 Robert Brown
+>Copyright (c) 2012-2014 Robert Brown
 >
 >Permission is hereby granted, free of charge, to any person obtaining a copy
 >of this software and associated documentation files (the "Software"), to deal

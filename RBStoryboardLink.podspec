@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'RBStoryboardLink'
-  s.version      = '0.0.4'
+  s.version      = '0.0.5'
   s.summary      = 'Makes transitioning between storyboards possible.'
   s.homepage     = 'https://github.com/rob-brown/RBStoryboardLink'
   s.license      = { 
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
       :git => 'https://github.com/rob-brown/RBStoryboardLink.git', 
       :commit => 'HEAD'
   }
-  s.platform     = :ios, '5.0'
+  s.platform     = :ios, '7.0'
   s.source_files = 'RBStoryboardLink.{h,m}'
   s.public_header_files = 'RBStoryboardLink.h'
   s.frameworks = 'UIKit'
