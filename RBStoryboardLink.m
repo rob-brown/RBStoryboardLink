@@ -207,10 +207,6 @@
     return [self.scene prefersStatusBarHidden];
 }
 
-- (id<UIViewControllerTransitionCoordinator>)transitionCoordinator {
-    return [self.scene transitionCoordinator] ?: [super transitionCoordinator];
-}
-
 
 #pragma mark - Message forwarding
 
