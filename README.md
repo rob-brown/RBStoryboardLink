@@ -36,6 +36,10 @@ There are two demos that are provided to show how to use `RBStoryboardLink`:
 
 * A tabbed workflow. 
 
+## Contribution
+
+Contributions are welcomed. I'm much more responsive to pull requests rather than issues. The sample apps use [KIF][2] for automated testing. Any pull requests must pass the tests before they will be merged. If new functionality is introduced, the pull requests must also add tests for the new behavior. 
+
 ## License
 
 `RBStoryboardLink` is licensed under the MIT license, which is reproduced in its entirety here:
@@ -61,3 +65,4 @@ There are two demos that are provided to show how to use `RBStoryboardLink`:
 >THE SOFTWARE.
 
   [1]: http://robsprogramknowledge.blogspot.com/2012/01/uistoryboard-best-practices.html
+  [2]: https://github.com/kif-framework/KIF
