@@ -35,8 +35,6 @@
 
 @implementation LTSecondViewController
 
-@synthesize badgeNumber = _badgeNumber;
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
@@ -45,7 +43,8 @@
     
     self.badgeNumber++;
     
-    [[self tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%u", self.badgeNumber]];
+    // TODO: Fix this so the tab bar can be accessed more directly.
+    [[[[self parentViewController] parentViewController] tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%u", self.badgeNumber]];
 }
 
 @end

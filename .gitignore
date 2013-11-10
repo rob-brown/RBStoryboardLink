@@ -4,3 +4,6 @@ xcuserdata
 *.xcuserdatad
 *.xcuserstate
 /LinkedStoryboards/.DS_Store
+/LinkedTabs/Pods/
+
+/LinkedStoryboards/Pods/

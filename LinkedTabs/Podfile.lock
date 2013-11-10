@@ -1,0 +1,13 @@
+PODS:
+  - KIF (2.0.0)
+  - RBStoryboardLink (0.0.6)
+
+DEPENDENCIES:
+  - KIF (~> 2.0)
+  - RBStoryboardLink
+
+SPEC CHECKSUMS:
+  KIF: ff3b46deb62ce3f8e99c6a2c786729e1eea241ba
+  RBStoryboardLink: 8a206a1f94f9d0771ea90e5b2dfeaa52c8642867
+
+COCOAPODS: 0.23.0

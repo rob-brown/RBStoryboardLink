@@ -38,6 +38,16 @@
                ReferencedContainer = "container:LinkedTabs.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E1FBA023182EFEB000E3ECB8"
+               BuildableName = "UI Tests.octest"
+               BlueprintName = "UI Tests"
+               ReferencedContainer = "container:LinkedTabs.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
