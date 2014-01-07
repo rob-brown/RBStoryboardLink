@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
       :tag => '0.0.6'
   }
   s.platform     = :ios, '7.0'
-  s.source_files = 'RBStoryboardLink.{h,m}'
+  s.source_files = 'RBStoryboardLink.{h,m}', 'RBStoryboardLinkSource.h'
   s.public_header_files = 'RBStoryboardLink.h'
   s.frameworks = 'UIKit'
   s.requires_arc = true

@@ -23,6 +23,7 @@
 //
 
 #import "RBStoryboardLink.h"
+#import "RBStoryboardLinkSource.h"
 
 
 @interface RBStoryboardLink ()
@@ -118,6 +119,32 @@
     self.transitioningDelegate = scene.transitioningDelegate;
 }
 
+- (NSString *)vertialConstraintString {
+    
+    // Defaults to using top and bottom layout guides.
+    BOOL needsTopLayoutGuide = YES;
+    BOOL needsBottomLayoutGuide = YES;
+    
+    if ([self.scene conformsToProtocol:@protocol(RBStoryboardLinkSource)]) {
+        id<RBStoryboardLinkSource> source = (id<RBStoryboardLinkSource>)self.scene;
+        
+        if ([source respondsToSelector:@selector(needsTopLayoutGuide)])
+            needsTopLayoutGuide = [source needsTopLayoutGuide];
+        
+        if ([source respondsToSelector:@selector(needsBottomLayoutGuide)])
+            needsBottomLayoutGuide = [source needsBottomLayoutGuide];
+    }
+    
+    if (needsTopLayoutGuide && needsBottomLayoutGuide)
+        return @"V:[topGuide][view][bottomGuide]";
+    else if (needsTopLayoutGuide)
+        return @"V:[topGuide][view]|";
+    else if (needsBottomLayoutGuide)
+        return @"V:|[view][bottomGuide]";
+    else
+        return @"V:|[view]|";
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -139,7 +166,7 @@
                                                                       options:0
                                                                       metrics:nil
                                                                         views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topGuide][view][bottomGuide]"
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[self vertialConstraintString]
                                                                       options:0
                                                                       metrics:nil
                                                                         views:views]];
