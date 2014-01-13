@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   }
   s.platform     = :ios, '7.0'
   s.source_files = 'RBStoryboardLink.{h,m}', 'RBStoryboardLinkSource.h'
-  s.public_header_files = 'RBStoryboardLink.h'
+  s.public_header_files = 'RBStoryboardLink.h', 'RBStoryboardLinkSource.h'
   s.frameworks = 'UIKit'
   s.requires_arc = true
 end
