@@ -1,7 +1,7 @@
 platform :ios, '7.0'
 
 # :path refers to the local copy for development.
-pod 'RBStoryboardLink', :path => '..'
+pod 'RBStoryboardLink', :path => '../RBStoryboardLink.podspec'
 
 # Conditional includes for the KIF tests.
 # It is important that we don't include KIF in the main app.
