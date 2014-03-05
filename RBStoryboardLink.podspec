@@ -12,7 +12,8 @@ Pod::Spec.new do |s|
       :git => 'https://github.com/rob-brown/RBStoryboardLink.git', 
       :tag => '0.0.8'
   }
-  s.platform     = :ios, '7.0'
+  #s.platform     = :ios, '7.0'
+  s.ios.deployment_target = '6.0'
   s.source_files = 'RBStoryboardLink.{h,m}', 'UIViewController+RBStoryboardLink.{h,m}', 'RBStoryboardLinkSource.h'
   s.public_header_files = 'RBStoryboardLink.h', 'UIViewController+RBStoryboardLink.h', 'RBStoryboardLinkSource.h'
   s.frameworks = 'UIKit'
