@@ -35,6 +35,48 @@
 
 @implementation RBStoryboardLink
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self)
+    {
+        [self loadDefaults];
+    }
+    
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self)
+    {
+        [self loadDefaults];
+    }
+    
+    return self;
+}
+
+- (id)init
+{
+    self = [super init];
+    
+    if (self)
+    {
+        [self loadDefaults];
+    }
+    
+    return self;
+}
+
+- (void)loadDefaults
+{
+    _needsTopLayoutGuide = YES;
+    _needsBottomLayoutGuide = YES;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     
@@ -122,9 +164,10 @@
 - (NSString *)vertialConstraintString {
     
     // Defaults to using top and bottom layout guides.
-    BOOL needsTopLayoutGuide = YES;
-    BOOL needsBottomLayoutGuide = YES;
+    BOOL needsTopLayoutGuide    = _needsTopLayoutGuide;
+    BOOL needsBottomLayoutGuide = _needsBottomLayoutGuide;
     
+    // Prefer to use the one on the delegate
     if ([self.scene conformsToProtocol:@protocol(RBStoryboardLinkSource)]) {
         id<RBStoryboardLinkSource> source = (id<RBStoryboardLinkSource>)self.scene;
         
