@@ -20,9 +20,10 @@
 
 5. While still in the Identity Inspector, add one or two User Defined Runtime Attributes. 
 
-  1. storyboardName (Required) The name of the storyboard to transition into.
-  
-  2. sceneIdentifier (Optional) The identifier of the view controller to transition to. If left blank, this will push the first view controller. 
+    1. storyboardName (Required) The name of the storyboard to transition into.
+    2. sceneIdentifier (Optional) The identifier of the view controller to transition to. If left blank, this will push the first view controller. 
+    3. needsTopLayoutGuide (Optional) Wether a custom layout constraint should be added to the top layout guide in storyboards. If you notice the background of your navigation bar not getting behind the status bar, set this to `NO`.
+    4. needsBottomLayoutGuide (Optional) Same as the one on top, but for the bottom guide.
 
 ## Implementation notes
 
