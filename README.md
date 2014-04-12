@@ -2,27 +2,28 @@
 
 ## Summary
 
-`UIStoryboards` are very powerful and useful. However, to make the best use of storyboards, they need to be broken down into natural modules. The problem with having many storyboards is writing the code to transition between them. `RBStoryboardLink` solves this problem by allowing "pseudo-segues" between `UIStoryboards`. These segues can be built without leaving Interface Builder and without writing any extra code. 
+`UIStoryboards` are very powerful and useful. However, to make the best use of storyboards, they need to be broken down into natural modules. The problem with having many storyboards is writing the code to transition between them. `RBStoryboardLink` solves this problem by allowing "pseudo-segues" between `UIStoryboards`. These segues can be built without leaving Interface Builder and without writing any extra code.
 
 ## Dependencies
 
-`RBStoryboardLink` requires iOS 7.0+. With some modifications it can support iOS 6 as well, but I wanted to keep it simple. `RBStoryboardLink` cannot simultaneously support iOS 5 and 7 due to the large functionality differences. 
+`RBStoryboardLink` requires iOS 7.0+. With some modifications it can support iOS 6 as well, but I wanted to keep it simple. `RBStoryboardLink` cannot simultaneously support iOS 5 and 7 due to the large functionality differences.
 
 ## How to use
 
-1. Your app's storyboards must first be decomposed into their natural modules. See this [guide][1] for some tips. 
+1. Your app's storyboards must first be decomposed into their natural modules. See this [guide][1] for some tips.
 
-2. Where ever you want create a transition into a different storyboard, create a `UIViewController` representing the scene to be pushed. 
+2. Where ever you want create a transition into a different storyboard, create a `UIViewController` representing the scene to be pushed.
 
-3. Create the desired segue type (Push, Modal, Custom) to these surrogate view controllers. 
+3. Create the desired segue type (Push, Modal, Custom) to these surrogate view controllers.
 
 4. In the Identity Inspector, change the class type of each surrogate view controller to `RBStoryboardLink`.
 
-5. While still in the Identity Inspector, add one or two User Defined Runtime Attributes. 
+5. While still in the Identity Inspector, add one or more User Defined Runtime Attributes.
 
-  1. storyboardName (Required) The name of the storyboard to transition into.
-  
-  2. sceneIdentifier (Optional) The identifier of the view controller to transition to. If left blank, this will push the first view controller. 
+    1. storyboardName (Required) The name of the storyboard to transition into.
+    2. sceneIdentifier (Optional) The identifier of the view controller to transition to. If left blank, this will push the first view controller.
+    3. needsTopLayoutGuide (Optional) Whether a custom layout constraint should be added to the top layout guide in storyboards. If you notice the background of your navigation bar not getting behind the status bar, set this to `NO`.
+    4. needsBottomLayoutGuide (Optional) Same as the one on top, but for the bottom guide.
 
 ## Implementation notes
 
@@ -32,13 +33,13 @@
 
 There are two demos that are provided to show how to use `RBStoryboardLink`:
 
-* A standard, straightforward workflow. 
+* A standard, straightforward workflow.
 
-* A tabbed workflow. 
+* A tabbed workflow.
 
 ## Contribution
 
-Contributions are welcomed. I'm much more responsive to pull requests rather than issues. The sample apps use [KIF][2] for automated testing. Any pull requests must pass the tests before they will be merged. If new functionality is introduced, the pull requests must also add tests for the new behavior. 
+Contributions are welcomed. I'm much more responsive to pull requests rather than issues. The sample apps use [KIF][2] for automated testing. Any pull requests must pass the tests before they will be merged. If new functionality is introduced, the pull requests must also add tests for the new behavior.
 
 ## License
 

@@ -35,27 +35,69 @@
 
 @implementation RBStoryboardLink
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+
+    if (self)
+    {
+        [self loadDefaults];
+    }
+
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+
+    if (self)
+    {
+        [self loadDefaults];
+    }
+
+    return self;
+}
+
+- (id)init
+{
+    self = [super init];
+
+    if (self)
+    {
+        [self loadDefaults];
+    }
+
+    return self;
+}
+
+- (void)loadDefaults
+{
+    _needsTopLayoutGuide = YES;
+    _needsBottomLayoutGuide = YES;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+
     NSAssert([self.storyboardName length], @"No storyboard name");
-    
+
     UIStoryboard * storyboard = [UIStoryboard storyboardWithName:self.storyboardName bundle:nil];
     UIViewController * scene = nil;
-    
+
     // Creates the linked scene.
     if ([self.sceneIdentifier length] == 0)
         scene = [storyboard instantiateInitialViewController];
     else
         scene = [storyboard instantiateViewControllerWithIdentifier:self.sceneIdentifier];
-    
+
     NSAssert(scene,
              @"No scene found in storyboard: \"%@\" with optional identifier: \"%@\"",
              self.storyboardName,
              self.sceneIdentifier);
-    
+
     self.scene = scene;
-    
+
     // Grabs the UINavigationItem stuff.
     UINavigationItem * navItem = self.navigationItem;
     UINavigationItem * linkedNavItem = scene.navigationItem;
@@ -69,16 +111,16 @@
     navItem.leftBarButtonItem = linkedNavItem.leftBarButtonItem;
     navItem.leftBarButtonItems = linkedNavItem.leftBarButtonItems;
     navItem.leftItemsSupplementBackButton = linkedNavItem.leftItemsSupplementBackButton;
-    
+
     // Grabs the UITabBarItem
     // The link overrides the contained view's tab bar item.
     if (self.tabBarController)
         scene.tabBarItem = self.tabBarItem;
-    
+
     // Grabs the edit button.
     UIBarButtonItem * editButton = self.editButtonItem;
     UIBarButtonItem * linkedEditButton = scene.editButtonItem;
-    
+
     if (linkedEditButton) {
         editButton.enabled = linkedEditButton.enabled;
         editButton.image = linkedEditButton.image;
@@ -95,22 +137,22 @@
         editButton.customView = linkedEditButton.customView;
         editButton.tintColor = linkedEditButton.tintColor;
     }
-    
+
     // Grabs the modal properties.
     self.modalTransitionStyle = scene.modalTransitionStyle;
     self.modalPresentationStyle = scene.modalPresentationStyle;
     self.definesPresentationContext = scene.definesPresentationContext;
     self.providesPresentationContextTransitionStyle = scene.providesPresentationContextTransitionStyle;
-    
+
     // Grabs the popover properties.
     self.preferredContentSize = scene.preferredContentSize;
     self.modalInPopover = scene.modalInPopover;
-    
+
     // Grabs miscellaneous properties.
     self.title = scene.title;
     self.hidesBottomBarWhenPushed = scene.hidesBottomBarWhenPushed;
     self.editing = scene.editing;
-    
+
     // Translucent bar properties.
     self.automaticallyAdjustsScrollViewInsets = scene.automaticallyAdjustsScrollViewInsets;
     self.edgesForExtendedLayout = scene.edgesForExtendedLayout;
@@ -120,21 +162,22 @@
 }
 
 - (NSString *)vertialConstraintString {
-    
+
     // Defaults to using top and bottom layout guides.
-    BOOL needsTopLayoutGuide = YES;
-    BOOL needsBottomLayoutGuide = YES;
-    
+    BOOL needsTopLayoutGuide    = self.needsTopLayoutGuide;
+    BOOL needsBottomLayoutGuide = self.needsBottomLayoutGuide;
+
+    // Prefers to use the layout guide options on the scene.
     if ([self.scene conformsToProtocol:@protocol(RBStoryboardLinkSource)]) {
         id<RBStoryboardLinkSource> source = (id<RBStoryboardLinkSource>)self.scene;
-        
+
         if ([source respondsToSelector:@selector(needsTopLayoutGuide)])
             needsTopLayoutGuide = [source needsTopLayoutGuide];
-        
+
         if ([source respondsToSelector:@selector(needsBottomLayoutGuide)])
             needsBottomLayoutGuide = [source needsBottomLayoutGuide];
     }
-    
+
     if (needsTopLayoutGuide && needsBottomLayoutGuide)
         return @"V:[topGuide][view][bottomGuide]";
     else if (needsTopLayoutGuide)
@@ -147,21 +190,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     // Adds the view controller as a child view.
     UIViewController * scene = self.scene;
     [self addChildViewController:scene];
     [self.view addSubview:scene.view];
     [self.scene didMoveToParentViewController:self];
-    
+
     scene.view.translatesAutoresizingMaskIntoConstraints = NO;
-    
+
     NSDictionary * views = @{
                              @"topGuide"    : self.topLayoutGuide,
                              @"bottomGuide" : self.bottomLayoutGuide,
                              @"view"        : scene.view,
                              };
-    
+
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[view]|"
                                                                       options:0
                                                                       metrics:nil
@@ -174,46 +217,46 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+
     if ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])
         [self.scene viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+
     if ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])
         [self.scene viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    
+
     if ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])
         [self.scene viewWillDisappear:animated];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    
+
     if ([self.scene isKindOfClass:[UINavigationController class]] || [self.scene isKindOfClass:[UITabBarController class]])
         [self.scene viewDidDisappear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    
+
     // The linked scene defines the rotation.
     return [self.scene shouldAutorotateToInterfaceOrientation:toInterfaceOrientation];
 }
 
 - (BOOL)shouldAutorotate {
-    
+
     // The linked scene defines autorotate.
     return [self.scene shouldAutorotate];
 }
 
 - (NSUInteger)supportedInterfaceOrientations {
-    
+
     // The linked scene defines supported orientations.
     return [self.scene supportedInterfaceOrientations];
 }
@@ -251,7 +294,7 @@
 }
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
-    
+
     if ([self.scene respondsToSelector:[anInvocation selector]])
         [anInvocation invokeWithTarget:self.scene];
     else

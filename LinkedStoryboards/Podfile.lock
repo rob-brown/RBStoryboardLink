@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../RBStoryboardLink.podspec
 
 SPEC CHECKSUMS:
-  KIF: ff3b46deb62ce3f8e99c6a2c786729e1eea241ba
+  KIF: c01fb8fb593cf8ffeeb69ed8d402ce88143e0697
   RBStoryboardLink: 1bcff9be9fa9de9d66ea10518a327be1af729d03
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.31.1

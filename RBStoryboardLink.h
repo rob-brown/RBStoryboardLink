@@ -42,4 +42,14 @@
 /// This should be set in the Interface Builder identity inspector.
 @property (nonatomic, copy) NSString * sceneIdentifier;
 
+/// (Optional) Whether the first view controller should have a constraint for
+/// the top layout guide in the storyboard. This should be set in the Interface
+/// Builder identity inspector.
+@property (nonatomic, assign) BOOL needsTopLayoutGuide;
+
+/// (Optional) Whether the first view controller should have a constraint for
+/// the bottom layout guide in the storyboard. This should be set in the
+/// Interface Builder identity inspector.
+@property (nonatomic, assign) BOOL needsBottomLayoutGuide;
+
 @end

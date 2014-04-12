@@ -7,5 +7,5 @@ pod 'RBStoryboardLink', :path => '../RBStoryboardLink.podspec'
 # It is important that we don't include KIF in the main app.
 # Some of the categories cause the UI to appear unresponsive.
 target 'UI Tests', :exclusive => true do
-    pod 'KIF', '~> 2.0'
+    pod 'KIF', '~> 2.0', :inhibit_warnings => true
 end
