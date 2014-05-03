@@ -1,6 +1,5 @@
 //
-// LSChooseViewController.m
-// LinkedStoryboards
+// RBStoryboardModalSegue.h
 //
 // Copyright (c) 2012-2014 Robert Brown
 //
@@ -23,29 +22,14 @@
 // THE SOFTWARE.
 //
 
-#import "LSChooseViewController.h"
-#import "RBStoryboardLink.h"
-#import "LSParameterReceivingViewController.h"
+#import "RBStoryboardSegue.h"
 
+@interface RBStoryboardModalSegue : RBStoryboardSegue
 
-@implementation LSChooseViewController
+@property (nonatomic, assign) UIModalPresentationStyle presentationStyle;
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
+@property (nonatomic, assign) UIModalTransitionStyle transitionStyle;
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    id scene = [segue destinationViewController];
-    
-    if ([scene isKindOfClass:[LSParameterReceivingViewController class]]) {
-        LSParameterReceivingViewController * vc = (LSParameterReceivingViewController *)scene;
-        
-        [[vc label] setText:[NSString stringWithFormat:
-                             @"This text has been set in code from %@ using %@", 
-                             NSStringFromClass([self class]),
-                             NSStringFromSelector(_cmd)]];
-    }
-}
+@property (nonatomic, copy) dispatch_block_t completion;
 
 @end

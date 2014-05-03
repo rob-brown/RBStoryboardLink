@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="zoV-MQ-Sl6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="zoV-MQ-Sl6">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="zDI-DU-e8U">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2ed-rt-JHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="zoV-MQ-Sl6" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ccZ-1u-3Gq">
                         <autoresizingMask key="autoresizingMask"/>
@@ -18,50 +16,40 @@
                         <segue destination="wiz-wc-ij9" kind="relationship" relationship="rootViewController" id="Ao1-ta-4Ky"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ed-rt-JHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-125" y="65"/>
         </scene>
         <!--Hello View Controller - First-->
         <scene sceneID="pC4-gC-Zar">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P4P-mm-DvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="wiz-wc-ij9" customClass="LSHelloViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z6u-Y3-iGJ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fer-vF-8l5">
-                                <rect key="frame" x="228" y="359" width="72" height="37"/>
+                                <rect key="frame" x="228" y="423" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="nta-W4-L9N" kind="push" id="yOJ-vq-Vrm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cDr-aA-FPx">
-                                <rect key="frame" x="20" y="359" width="111" height="37"/>
+                                <rect key="frame" x="20" y="423" width="111" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Say Hello">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="sayHello:" destination="wiz-wc-ij9" eventType="touchUpInside" id="IxH-VK-4ek"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="21W-Sq-JlT">
-                                <rect key="frame" x="20" y="197" width="280" height="21"/>
+                                <rect key="frame" x="20" y="228.5" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -75,50 +63,40 @@
                         <outlet property="helloLabel" destination="21W-Sq-JlT" id="kzj-mr-aKs"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P4P-mm-DvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="384" y="65"/>
         </scene>
         <!--Random Number View Controller - Second-->
         <scene sceneID="fgf-7q-0vM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ect-Xh-thC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="nta-W4-L9N" customClass="LSRandomNumberViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t8L-9a-U16">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gZa-7L-VEK">
-                                <rect key="frame" x="234" y="359" width="72" height="37"/>
+                                <rect key="frame" x="234" y="423" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
-                                    <segue destination="HbF-ph-fGN" kind="push" id="nHi-e8-4R7"/>
+                                    <segue destination="HbF-ph-fGN" kind="custom" customClass="RBStoryboardPushSegue" id="nHi-e8-4R7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oaF-Ds-EiH">
-                                <rect key="frame" x="20" y="359" width="146" height="37"/>
+                                <rect key="frame" x="20" y="423" width="146" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Random Number">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showRandomNumber:" destination="nta-W4-L9N" eventType="touchUpInside" id="aNH-ip-S8T"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="PET-le-WYM">
-                                <rect key="frame" x="20" y="197" width="280" height="21"/>
+                                <rect key="frame" x="20" y="228.5" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -132,16 +110,16 @@
                         <outlet property="randomNumberLabel" destination="PET-le-WYM" id="gyv-0G-DDc"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ect-Xh-thC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="844" y="65"/>
         </scene>
         <!--Storyboard Link - Pseudo-VC-->
         <scene sceneID="0OO-B6-lSh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vyb-EF-Uxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="HbF-ph-fGN" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N6n-fo-Tge">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -150,27 +128,11 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="SecondaryStoryboard"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vyb-EF-Uxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1299" y="65"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="LSHelloViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LSHelloViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="helloLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LSRandomNumberViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LSRandomNumberViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="randomNumberLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="RBStoryboardLink" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RBStoryboardLink.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

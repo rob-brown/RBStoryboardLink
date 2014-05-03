@@ -1,6 +1,5 @@
 //
-// LSChooseViewController.m
-// LinkedStoryboards
+// UIViewController+RBStoryboardLink.h
 //
 // Copyright (c) 2012-2014 Robert Brown
 //
@@ -23,29 +22,22 @@
 // THE SOFTWARE.
 //
 
-#import "LSChooseViewController.h"
-#import "RBStoryboardLink.h"
-#import "LSParameterReceivingViewController.h"
+#import <UIKit/UIKit.h>
+
+@class RBStoryboardLink;
 
 
-@implementation LSChooseViewController
+@interface UIViewController (RBStoryboardLink)
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
+/// Returns the storyboard link this view controller is contained in, if any.
+- (RBStoryboardLink *)rbsl_storyboardLink;
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    id scene = [segue destinationViewController];
-    
-    if ([scene isKindOfClass:[LSParameterReceivingViewController class]]) {
-        LSParameterReceivingViewController * vc = (LSParameterReceivingViewController *)scene;
-        
-        [[vc label] setText:[NSString stringWithFormat:
-                             @"This text has been set in code from %@ using %@", 
-                             NSStringFromClass([self class]),
-                             NSStringFromSelector(_cmd)]];
-    }
-}
+/**
+ * If the view controller is within a storyboard link, the link is returned.
+ * If not, `self` is returned. The intent is to access certain visual elements 
+ * (such as `toolbarItems`) on the proper view controller when it's unknown if 
+ * the view controller is contained in a link.
+ */
+- (UIViewController *)rbsl_targetViewController;
 
 @end

@@ -10,11 +10,13 @@
 
 ## How to use
 
+**NOTE:** As of 0.1.0, there is a new workflow. The old workflow only used `RBStoryboardLink`. It was responsible for all the work by acting as a proxy for the real view controller. In the new workflow, `RBStoryboardLink` merely provides information for `RBStoryboardSegue`. `RBStoryboardSegue` redirects the segue on presentation. This redirection avoids the complexity of `UIViewController` containment and dereferencing a proxy in methods such as `-prepareForSegue:sender:`. The new workflow is thanks to [@MBulli][3].
+
 1. Your app's storyboards must first be decomposed into their natural modules. See this [guide][1] for some tips.
 
 2. Where ever you want create a transition into a different storyboard, create a `UIViewController` representing the scene to be pushed.
 
-3. Create the desired segue type (Push, Modal, Custom) to these surrogate view controllers.
+3. Create the desired segue type (Push, Modal, Custom) to these surrogate view controllers. To take advantage of the new linking, set the type to custom and choose one of `RBStoryboardPushSegue`, `RBStoryboardModalSegue`, or `RBStoryboardPopoverSegue`. You may also create subclasses of `RBStoryboardSegue` for custom transitions. 
 
 4. In the Identity Inspector, change the class type of each surrogate view controller to `RBStoryboardLink`.
 
@@ -22,8 +24,8 @@
 
     1. storyboardName (Required) The name of the storyboard to transition into.
     2. sceneIdentifier (Optional) The identifier of the view controller to transition to. If left blank, this will push the first view controller.
-    3. needsTopLayoutGuide (Optional) Whether a custom layout constraint should be added to the top layout guide in storyboards. If you notice the background of your navigation bar not getting behind the status bar, set this to `NO`.
-    4. needsBottomLayoutGuide (Optional) Same as the one on top, but for the bottom guide.
+    3. needsTopLayoutGuide (Optional) Whether a custom layout constraint should be added to the top layout guide in storyboards. If you notice the background of your navigation bar not getting behind the status bar, set this to `NO`. This property is unused if using one of the `RBStoryboardSegue`s.
+    4. needsBottomLayoutGuide (Optional) Same as the one on top, but for the bottom guide. This property is unused if using one of the `RBStoryboardSegue`s.
 
 ## Implementation notes
 
@@ -67,3 +69,4 @@ Contributions are welcomed. I'm much more responsive to pull requests rather tha
 
   [1]: http://robsprogramknowledge.blogspot.com/2012/01/uistoryboard-best-practices.html
   [2]: https://github.com/kif-framework/KIF
+  [3]: https://github.com/MBulli

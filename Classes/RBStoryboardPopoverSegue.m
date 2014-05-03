@@ -1,6 +1,5 @@
 //
-// LSChooseViewController.m
-// LinkedStoryboards
+// RBStoryboardPopoverSegue.m
 //
 // Copyright (c) 2012-2014 Robert Brown
 //
@@ -23,29 +22,23 @@
 // THE SOFTWARE.
 //
 
-#import "LSChooseViewController.h"
+#import "RBStoryboardPopoverSegue.h"
+#import "RBStoryboardSegue.h"
 #import "RBStoryboardLink.h"
-#import "LSParameterReceivingViewController.h"
 
+@implementation RBStoryboardPopoverSegue
 
-@implementation LSChooseViewController
+- (id)initWithIdentifier:(NSString *)identifier source:(UIViewController *)source destination:(UIViewController *)destination
+{
+    NSAssert([destination isKindOfClass:[RBStoryboardLink class]], @"RBStoryboardSegue can only be used with a RBStoryboardLink as seque destination.");
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
+    UIViewController * newDestination = [RBStoryboardSegue viewControllerFromLink:(RBStoryboardLink *)destination];
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    id scene = [segue destinationViewController];
-    
-    if ([scene isKindOfClass:[LSParameterReceivingViewController class]]) {
-        LSParameterReceivingViewController * vc = (LSParameterReceivingViewController *)scene;
-        
-        [[vc label] setText:[NSString stringWithFormat:
-                             @"This text has been set in code from %@ using %@", 
-                             NSStringFromClass([self class]),
-                             NSStringFromSelector(_cmd)]];
+    if ((self = [super initWithIdentifier:identifier source:source destination:newDestination])) {
+
     }
+
+    return self;
 }
 
 @end
