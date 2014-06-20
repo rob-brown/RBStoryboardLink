@@ -82,7 +82,7 @@
 
     NSAssert([self.storyboardName length], @"No storyboard name");
 
-    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:self.storyboardName bundle:nil];
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:self.storyboardName bundle:[NSBundle bundleWithIdentifier:self.storyboardBundleIdentifier]];
     UIViewController * scene = nil;
 
     // Creates the linked scene.
