@@ -40,7 +40,7 @@
     NSAssert(storyboardName, @"Unable to load linked storyboard. RBStoryboardLink storyboardName is nil. Forgot to set attribute in interface builder?");
     
     // Creates new destination.
-    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:storyboardBundleIdentifier];
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle bundleWithIdentifier:storyboardBundleIdentifier]];
     
     if ([storyboardID length] == 0) {
         return [storyboard instantiateInitialViewController];
