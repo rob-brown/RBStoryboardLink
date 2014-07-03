@@ -284,21 +284,25 @@
 
 - (BOOL)respondsToSelector:(SEL)aSelector {
     return ([super respondsToSelector:aSelector] ||
-            [self.scene respondsToSelector:aSelector]);
+                    [self.scene respondsToSelector:aSelector] ||
+                    (self.scene && [self.scene.childViewControllers count] && [self.scene.childViewControllers[0] respondsToSelector:aSelector]));
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
-    return ([super methodSignatureForSelector:aSelector]
-            ?:
-            [self.scene methodSignatureForSelector:aSelector]);
+    return ([super methodSignatureForSelector:aSelector] ?:
+            [self.scene methodSignatureForSelector:aSelector] ?:
+                        [self.scene.childViewControllers[0] methodSignatureForSelector:aSelector]);
 }
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
 
-    if ([self.scene respondsToSelector:[anInvocation selector]])
+   if ([self.scene isKindOfClass:UINavigationController.class] && [self.scene.childViewControllers[0] respondsToSelector:[anInvocation selector]]) {
+        [anInvocation invokeWithTarget:self.scene.childViewControllers[0]];
+    } else if ([self.scene respondsToSelector:[anInvocation selector]]) {
         [anInvocation invokeWithTarget:self.scene];
-    else
+    } else {
         [super forwardInvocation:anInvocation];
+    }
 }
 
 @end
