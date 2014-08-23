@@ -41,7 +41,7 @@ There are two demos that are provided to show how to use `RBStoryboardLink`:
 
 ## Contribution
 
-Contributions are welcomed. I'm much more responsive to pull requests rather than issues. The sample apps use [KIF][2] for automated testing. Any pull requests must pass the tests before they will be merged. If new functionality is introduced, the pull requests must also add tests for the new behavior. If you want to contribute and don't know what to tackle, take a look at the [issues list](issues).
+Contributions are welcomed. I'm much more responsive to pull requests rather than issues. The sample apps use [KIF][2] for automated testing. Any pull requests must pass the tests before they will be merged. If new functionality is introduced, the pull requests must also add tests for the new behavior. If you want to contribute and don't know what to tackle, take a look at the issues list.
 
 ## License
 
