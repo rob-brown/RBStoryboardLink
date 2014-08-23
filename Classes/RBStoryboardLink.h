@@ -38,6 +38,10 @@
 /// This should be set in the Interface Builder identity inspector.
 @property (nonatomic, copy) NSString * storyboardName;
 
+/// (Optional) The bundle id of the bundle containing the storyboard to be linked.
+/// This should be set in the Interface Builder identity inspector.
+@property (nonatomic, copy) NSString * storyboardBundleIdentifier;
+
 /// (Optional) The identifier of the scene to show.
 /// This should be set in the Interface Builder identity inspector.
 @property (nonatomic, copy) NSString * sceneIdentifier;
