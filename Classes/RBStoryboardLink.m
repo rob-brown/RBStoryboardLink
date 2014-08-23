@@ -190,6 +190,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor clearColor];
 
     // Adds the view controller as a child view.
     UIViewController * scene = self.scene;
