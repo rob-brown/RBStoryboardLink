@@ -16,7 +16,7 @@
 
 2. Where ever you want create a transition into a different storyboard, create a `UIViewController` representing the scene to be pushed.
 
-3. Create the desired segue type (Push, Modal, Custom) to these surrogate view controllers. To take advantage of the new linking, set the type to custom and choose one of `RBStoryboardPushSegue`, `RBStoryboardModalSegue`, or `RBStoryboardPopoverSegue`. You may also create subclasses of `RBStoryboardSegue` for custom transitions. 
+3. Create the desired segue type (Push, Modal, Custom) to these surrogate view controllers. To take advantage of the new linking, set the type to custom and choose one of `RBStoryboardPushSegue`, `RBStoryboardModalSegue`, or `RBStoryboardPopoverSegue`. You may also create subclasses of `RBStoryboardSegue` for custom transitions.
 
 4. In the Identity Inspector, change the class type of each surrogate view controller to `RBStoryboardLink`.
 
@@ -41,7 +41,7 @@ There are two demos that are provided to show how to use `RBStoryboardLink`:
 
 ## Contribution
 
-Contributions are welcomed. I'm much more responsive to pull requests rather than issues. The sample apps use [KIF][2] for automated testing. Any pull requests must pass the tests before they will be merged. If new functionality is introduced, the pull requests must also add tests for the new behavior.
+Contributions are welcomed. I'm much more responsive to pull requests rather than issues. The sample apps use [KIF][2] for automated testing. Any pull requests must pass the tests before they will be merged. If new functionality is introduced, the pull requests must also add tests for the new behavior. If you want to contribute and don't know what to tackle, take a look at the [issues list](issues).
 
 ## License
 
