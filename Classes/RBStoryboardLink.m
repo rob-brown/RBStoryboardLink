@@ -282,9 +282,8 @@
 
 // The following methods are important to get unwind segues to work properly.
 
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    return ([super respondsToSelector:aSelector] ||
-            [self.scene respondsToSelector:aSelector]);
+- (BOOL)canPerformUnwindSegueAction:(SEL)action fromViewController:(UIViewController *)fromViewController withSender:(id)sender {
+    return [self.scene canPerformUnwindSegueAction:action fromViewController:fromViewController withSender:sender];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
@@ -294,7 +293,6 @@
 }
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
-
     if ([self.scene respondsToSelector:[anInvocation selector]])
         [anInvocation invokeWithTarget:self.scene];
     else
