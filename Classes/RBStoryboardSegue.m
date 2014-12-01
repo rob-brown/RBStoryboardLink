@@ -32,6 +32,11 @@
     
     NSParameterAssert(link);
     
+    if (link.scene)
+    {
+        return link.scene;
+    }
+    
     // Grabs the user-defined runtime attributes.
     NSString * storyboardName = [(RBStoryboardLink *)link storyboardName];
     NSString * storyboardID = [(RBStoryboardLink *)link sceneIdentifier];

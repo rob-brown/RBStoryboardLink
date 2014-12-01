@@ -26,6 +26,15 @@
 
 @implementation RBStoryboardModalSegue
 
+- (id)initWithIdentifier:(NSString *)identifier source:(UIViewController *)source destination:(UIViewController *)destination {
+    if (self = [super initWithIdentifier:identifier source:source destination:destination]) {
+        self.presentationStyle = destination.modalPresentationStyle;
+        self.transitionStyle = destination.modalTransitionStyle;
+        
+    };
+    return self;
+}
+
 - (void)perform {
 
     [self.destinationViewController setModalPresentationStyle:self.presentationStyle];
