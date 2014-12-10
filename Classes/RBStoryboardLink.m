@@ -161,7 +161,7 @@
     self.transitioningDelegate = scene.transitioningDelegate;
 }
 
-- (NSString *)vertialConstraintString {
+- (NSString *)verticalConstraintString {
 
     // Defaults to using top and bottom layout guides.
     BOOL needsTopLayoutGuide    = self.needsTopLayoutGuide;
