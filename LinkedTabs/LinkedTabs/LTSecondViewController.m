@@ -44,7 +44,7 @@
     self.badgeNumber++;
     
     // TODO: Fix this so the tab bar can be accessed more directly.
-    [[[[self parentViewController] parentViewController] tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%u", self.badgeNumber]];
+    [[[[self parentViewController] parentViewController] tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%@", @(self.badgeNumber)]];
 }
 
 @end

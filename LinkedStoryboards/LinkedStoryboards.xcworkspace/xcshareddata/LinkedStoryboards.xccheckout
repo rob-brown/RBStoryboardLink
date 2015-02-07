@@ -10,29 +10,29 @@
 	<string>LinkedStoryboards</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>6592FB75-48AC-415C-9FC6-DF69CF9E142B</key>
+		<key>31E949F82B992C62AB1787F005AC43C038098CF2</key>
 		<string>ssh://github.com/rob-brown/RBStoryboardLink.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>LinkedStoryboards/LinkedStoryboards.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>6592FB75-48AC-415C-9FC6-DF69CF9E142B</key>
+		<key>31E949F82B992C62AB1787F005AC43C038098CF2</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/rob-brown/RBStoryboardLink.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6592FB75-48AC-415C-9FC6-DF69CF9E142B</string>
+	<string>31E949F82B992C62AB1787F005AC43C038098CF2</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6592FB75-48AC-415C-9FC6-DF69CF9E142B</string>
+			<string>31E949F82B992C62AB1787F005AC43C038098CF2</string>
 			<key>IDESourceControlWCCName</key>
 			<string>RBStoryboardLink</string>
 		</dict>
