@@ -2,6 +2,8 @@
 
 ## Summary
 
+`RBStoryboardLink` started out as a proof-of-concept and that is still largely the case. It may not work in all cases. Furthermore, `RBStoryboardLink` should not be used without first understanding storyboards.
+
 `UIStoryboards` are very powerful and useful. However, to make the best use of storyboards, they need to be broken down into natural modules. The problem with having many storyboards is writing the code to transition between them. `RBStoryboardLink` solves this problem by allowing "pseudo-segues" between `UIStoryboards`. These segues can be built without leaving Interface Builder and without writing any extra code.
 
 ## Dependencies
@@ -47,7 +49,7 @@ Contributions are welcomed. I'm much more responsive to pull requests rather tha
 
 `RBStoryboardLink` is licensed under the MIT license, which is reproduced in its entirety here:
 
->Copyright (c) 2012-2014 Robert Brown
+>Copyright (c) 2012-2015 Robert Brown
 >
 >Permission is hereby granted, free of charge, to any person obtaining a copy
 >of this software and associated documentation files (the "Software"), to deal
