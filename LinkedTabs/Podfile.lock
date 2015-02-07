@@ -2,7 +2,7 @@ PODS:
   - KIF (3.1.2):
     - KIF/XCTest (= 3.1.2)
   - KIF/XCTest (3.1.2)
-  - RBStoryboardLink (0.1.1)
+  - RBStoryboardLink (0.1.4)
 
 DEPENDENCIES:
   - KIF (~> 3.0)
@@ -14,6 +14,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   KIF: 068074b24dd455025e7f2a488ba4fb07b9ce047b
-  RBStoryboardLink: d870832266eede14cb45533e7a10e4fbd5b011ce
+  RBStoryboardLink: 5635f1f5b6255b570ad76e0a4bba04be163f044e
 
 COCOAPODS: 0.35.0
