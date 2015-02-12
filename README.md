@@ -18,7 +18,7 @@
 
 2. Where ever you want create a transition into a different storyboard, create a `UIViewController` representing the scene to be pushed.
 
-3. Create the desired segue type (Push, Modal, Custom) to these surrogate view controllers. To take advantage of the new linking, set the type to custom and choose one of `RBStoryboardPushSegue`, `RBStoryboardModalSegue`, or `RBStoryboardPopoverSegue`. You may also create subclasses of `RBStoryboardSegue` for custom transitions.
+3. Create the desired segue type (Push, Modal, Custom) to these surrogate view controllers. To take advantage of the new linking, set the type to custom and choose one of `RBStoryboardPushSegue`, `RBStoryboardModalSegue`, or `RBStoryboardPopoverSegue`. You may also create subclasses of `RBStoryboardSegue` for custom transitions. If you do not set the segue to the appropriate `RBStoryboard*Segue` classes, it cannot be guaranteed that segue animations will work successfully (e.g. tab bar hiding with `hidesBottomBarWhenPushed`).
 
 4. In the Identity Inspector, change the class type of each surrogate view controller to `RBStoryboardLink`.
 
