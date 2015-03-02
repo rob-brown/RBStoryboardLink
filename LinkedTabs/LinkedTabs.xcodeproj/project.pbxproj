@@ -72,7 +72,7 @@
 		E1EBCA4515851A8500892759 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E1EBCA6715851B4B00892759 /* FirstTabStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstTabStoryboard.storyboard; sourceTree = "<group>"; };
 		E1EBCA6915851B5600892759 /* SecondTabStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondTabStoryboard.storyboard; sourceTree = "<group>"; };
-		E1FBA024182EFEB000E3ECB8 /* UI Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1FBA024182EFEB000E3ECB8 /* UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FBA025182EFEB000E3ECB8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E1FBA02B182EFEB000E3ECB8 /* UI Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UI Tests-Info.plist"; sourceTree = "<group>"; };
 		E1FBA02D182EFEB000E3ECB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				E1EBCA1815851A8500892759 /* LinkedTabs.app */,
-				E1FBA024182EFEB000E3ECB8 /* UI Tests.octest */,
+				E1FBA024182EFEB000E3ECB8 /* UI Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,7 +258,7 @@
 			);
 			name = "UI Tests";
 			productName = "UI Tests";
-			productReference = E1FBA024182EFEB000E3ECB8 /* UI Tests.octest */;
+			productReference = E1FBA024182EFEB000E3ECB8 /* UI Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -559,7 +559,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -587,7 +586,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

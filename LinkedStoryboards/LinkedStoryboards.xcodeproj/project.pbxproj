@@ -78,7 +78,7 @@
 		E1EBCA7715857C3B00892759 /* ModalStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ModalStoryboard.storyboard; sourceTree = "<group>"; };
 		E1EBCA7A15857D4A00892759 /* LSModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSModalViewController.h; sourceTree = "<group>"; };
 		E1EBCA7B15857D4A00892759 /* LSModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSModalViewController.m; sourceTree = "<group>"; };
-		E1FBA007182EF33D00E3ECB8 /* UI Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1FBA007182EF33D00E3ECB8 /* UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FBA008182EF33D00E3ECB8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E1FBA00E182EF33D00E3ECB8 /* UI Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UI Tests-Info.plist"; sourceTree = "<group>"; };
 		E1FBA010182EF33D00E3ECB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				E1EA28281584FB34004B0898 /* LinkedStoryboards.app */,
-				E1FBA007182EF33D00E3ECB8 /* UI Tests.octest */,
+				E1FBA007182EF33D00E3ECB8 /* UI Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,7 +285,7 @@
 			);
 			name = "UI Tests";
 			productName = "UI Tests";
-			productReference = E1FBA007182EF33D00E3ECB8 /* UI Tests.octest */;
+			productReference = E1FBA007182EF33D00E3ECB8 /* UI Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -579,17 +579,12 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UI Tests/UI Tests-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				INFOPLIST_FILE = "UI Tests/UI Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -617,7 +612,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
