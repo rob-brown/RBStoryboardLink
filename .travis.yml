@@ -1,0 +1,13 @@
+language: objective-c
+before_install:
+  - gem update cocoapods
+env:
+  - XC_SDK=iphonesimulator7.0
+  - XC_SDK=iphonesimulator7.1
+  - XC_SDK=iphonesimulator8.1
+install:
+  - pushd LinkedStoryboards; pod install; popd;
+  - pushd LinkedTabs; pod install; popd;
+script:
+  - xcodebuild -workspace LinkedStoryboards/LinkedStoryboards.xcworkspace -scheme LinkedStoryboards -sdk $XC_SDK build test | xcpretty -c && exit ${PIPESTATUS[0]}
+  - xcodebuild -workspace LinkedTabs/LinkedTabs.xcworkspace -scheme LinkedTabs -sdk $XC_SDK build test | xcpretty -c && exit ${PIPESTATUS[0]}
