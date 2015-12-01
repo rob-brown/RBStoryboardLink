@@ -257,7 +257,7 @@
     return [self.scene shouldAutorotate];
 }
 
-- (NSUInteger)supportedInterfaceOrientations {
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
 
     // The linked scene defines supported orientations.
     return [self.scene supportedInterfaceOrientations];
