@@ -23,6 +23,7 @@
 //
 
 #import <UIKit/UIKit.h>
+IB_DESIGNABLE
 
 /**
  * Basically, what this class does is create a linked scene, put it in a
@@ -32,28 +33,28 @@
 @interface RBStoryboardLink : UIViewController
 
 /// The contained UIViewController from the destination view controller.
-@property (nonatomic, strong, readonly) UIViewController * scene;
+@property (nonatomic, strong, readonly) IBInspectable UIViewController * scene;
 
 /// The name of the storyboard that should be linked.
 /// This should be set in the Interface Builder identity inspector.
-@property (nonatomic, copy) NSString * storyboardName;
+@property (nonatomic, copy) IBInspectable NSString * storyboardName;
 
 /// (Optional) The bundle id of the bundle containing the storyboard to be linked.
 /// This should be set in the Interface Builder identity inspector.
-@property (nonatomic, copy) NSString * storyboardBundleIdentifier;
+@property (nonatomic, copy) IBInspectable NSString * storyboardBundleIdentifier;
 
 /// (Optional) The identifier of the scene to show.
 /// This should be set in the Interface Builder identity inspector.
-@property (nonatomic, copy) NSString * sceneIdentifier;
+@property (nonatomic, copy) IBInspectable NSString * sceneIdentifier;
 
 /// (Optional) Whether the first view controller should have a constraint for
 /// the top layout guide in the storyboard. This should be set in the Interface
 /// Builder identity inspector.
-@property (nonatomic, assign) BOOL needsTopLayoutGuide;
+@property (nonatomic, assign) IBInspectable BOOL needsTopLayoutGuide;
 
 /// (Optional) Whether the first view controller should have a constraint for
 /// the bottom layout guide in the storyboard. This should be set in the
 /// Interface Builder identity inspector.
-@property (nonatomic, assign) BOOL needsBottomLayoutGuide;
+@property (nonatomic, assign) IBInspectable BOOL needsBottomLayoutGuide;
 
 @end
