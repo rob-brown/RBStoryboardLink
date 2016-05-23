@@ -279,6 +279,10 @@
     return [self.scene prefersStatusBarHidden];
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return [self.scene preferredStatusBarStyle];
+}
 
 #pragma mark - Message forwarding
 
